@@ -14,6 +14,12 @@ app.use(express.json());
 const studentRoutes =require('./routes/student');
 app.use('/api', studentRoutes);
 
+//reference Routes
+const authRoutes =require('./routes/auth');
+app.use('/api', authRoutes);
+
+
+
 
 app.listen(process.env.PORT, ()=>{
     console.log(
